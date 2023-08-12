@@ -9,7 +9,7 @@ async function getAllVideoGames() {
         const { rows: videoGames } = await client.query(`SELECT * FROM videogames`);
         return videoGames;
     } catch (error) {
-        throw new Error("Make sure you have replaced the REPLACE_ME placeholder.")
+        throw error;
     }
 }
 
